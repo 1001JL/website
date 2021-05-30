@@ -1,0 +1,225 @@
+
+body {
+    margin: 0;
+    overflow: hidden;
+    background-color: white;
+    overflow-y: scroll;
+  }
+  canvas {
+      background-color: #333333;
+  }
+  #instructions {
+    position: absolute;
+    color: #000;
+    bottom: 0;
+    padding-bottom: 6px;
+    font-family: sans-serif;
+      font-size: 20px;
+    width: 100%;
+    text-align: center;
+    pointer-events: none;
+  }  
+  .home{
+    width: 100%;
+    background-color: #333333 ;
+  }
+  img{
+    max-width: 100%;
+  }
+  .home a{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    padding: 20px;
+    color: antiquewhite;
+    font-size: 20px;
+    text-decoration: none;
+  }
+  .homepage{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    background-image: url(images/federico-scarionati-fKdrw0KMNig-unsplash.jpg);
+    background-color: #2c3e50;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: sans-serif;
+    padding: 29px;
+    color: white;
+  }
+
+   .nav{
+    position: relative;
+    margin: 200px auto 0;
+    width: 420px;
+    height: 50px;
+    background: #34495e;
+    border-radius: 8px;
+}
+.nav a{
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  font-size: 15px;
+  text-transform: uppercase;
+  color: white;
+  text-decoration: none;
+  line-height: 5px;
+  text-align: center;
+  padding-top: 25px;
+}
+nav a.icon
+{
+  display: none;
+
+}
+.nav .animation{
+  position: absolute;
+  height: 100%;
+  top: 0;
+  z-index: 0;
+  background: #1abc9c;
+  
+  border-radius: 8px;
+}
+a:nth-child(1){
+  width: 100px;
+}
+
+.nav .start-history,  a:nth-child(1):hover~.animation{
+  width: 100px;
+  left: 0;
+}
+a:nth-child(2){
+  width: 110px;
+}
+.nav .start-actors,  a:nth-child(2):hover~.animation{
+  width: 110px;
+  left: 100px;
+}
+a:nth-child(3){
+  width: 200px;
+}
+.nav .start-fans,  a:nth-child(3):hover~.animation{
+  width: 200px;
+  left: 210px;
+}
+
+.homepage h3{
+  color: white;
+  height: 30px;
+  width: 80px;
+  border: 2px solid white;
+}
+.history{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background: #333333 ;
+  margin-top: 80px;
+}
+.container
+{
+     position: relative;
+     width: 1300px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-wrap: wrap;
+     padding: 30px;
+}
+.container img
+{
+    height: 300px;
+    width: 200px;
+}
+.container .card
+{
+    position: relative;
+    max-width: 250px;
+    height: 250px;
+    background: #ffffff;
+    margin: 30px 10px;
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 5px 250px rgba(0, 0, 0, 0.5);
+    transition: 0.3s ease-in-out;
+}
+.container .card:hover
+{
+    height: 1500px;
+}
+.container .card .imgBx
+{
+    position: relative;
+    width: 260px;
+    height: 260px;
+    top: -60px;
+    left: 20px;
+    z-index: 1;
+    /*box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);*/
+
+}
+.container .card .imgBx img
+{
+  max-width: 100%;
+  border-radius: 4px;
+}
+.container .card .content
+{
+   position: relative;
+   margin-top: -140px;
+   padding: 10px 15px;
+   text-align: center;
+   color: #111111;
+   visibility: hidden;
+   opacity: 0;
+   transition: 0.3s ease-in-out;
+
+}
+.container .card:hover .content
+{
+  visibility: visible;
+  opacity: 1;
+  margin-top: -40px;
+  transition-delay: 0.3s;
+}
+.container .card .content .video iframe
+{
+  height: 100px;
+  width: 200px;
+}
+
+@media screen and (max-width: 600px)
+{
+  .nav a{
+    display: none;
+  }
+  .container{
+    flex-direction: column;
+  }
+  
+nav a.icon
+{
+  display: block;
+}
+.nav .icon 
+{
+  position: absolute;
+  right: 0;
+  top: 15%;
+  transform: translateY(-50%);
+}
+  nav.nav{
+    width: 300px;
+  }
+  nav a{
+    width: 100%;
+  }
+}
